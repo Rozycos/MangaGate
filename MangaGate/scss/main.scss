@@ -1,12 +1,13 @@
-/* Settings */
-//@import "settings/all";
-/* all.scss importuje reszte */
- 
 /* Generic */
 @import "generic/reset";
 //@import "generic/print";
+
+/* Settings */
+@import "settings/index";
+//@import "settings/fonts";
+//@import "settings/colors";
  
 /* Elements */
 // @import "elements/fonts";
-// @import "elements/base";
+@import "elements/base";
 // @import "elements/buttons";

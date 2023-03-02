@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: calc(15px + 0.390625vw);
+}
+
+body {
+    font-family: $font-poppins;
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+}
