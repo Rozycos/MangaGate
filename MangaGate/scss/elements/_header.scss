@@ -1,0 +1,55 @@
+//header
+.header {
+    color: $color-black;
+    height: 3.1115em;
+    background-color: $color-white;
+}
+
+//navigation & logo
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    border-bottom: 0.4rem;
+    padding: 0 0 0 1.5rem;
+}
+
+.logo {
+    text-decoration: none;
+    color: $color-black;
+    
+    &__element {
+        font-family: $logo-font;
+        font-size: 1em;
+    }
+    
+    span {
+        font-family: $font-poppins;
+    }
+}
+
+.header__nav {
+    font-size: 0.62222rem;
+    font-weight: 500;
+    display:flex;
+    justify-content: space-between;
+}
+
+.nav {
+    
+    &__element {
+        padding: 0 1.5rem;
+        list-style: none;
+    }
+    
+    &__link {
+        text-decoration: none;
+        color: $color-black;
+        
+        &:hover {
+            color: $color-black;
+            border-bottom: 2px solid $color-black;
+        }
+    }
+}

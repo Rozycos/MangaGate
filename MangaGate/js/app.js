@@ -1,11 +1,19 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import '../scss/main.scss';
+import AdminPanel from "./components/AppMain/AdminPanel";
+import LandingPage from "./components/LandingPage/index";
+import NotFound from "./components/NotFound";
 
 const App = () => (
-    <>
-        <h1>Hello World</h1>
-    </>
+    <HashRouter>
+        <Routes>
+            <Route path={"/"} element={<LandingPage />}></Route>
+            <Route path={"admin"} element={<AdminPanel />}></Route>
+            <Route path="*" element={<NotFound />} />
+        </Routes>
+    </HashRouter>
 )
 
 const container = document.getElementById("app");

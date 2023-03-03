@@ -8,9 +8,15 @@ html {
 
 body {
     font-family: $font-poppins;
+    background-color: $color-background;
 }
 
 .container {
     width: 1440px;
     margin: 0 auto;
+
+    @include notebook {
+        width: 100%;
+        ///padding: 0 1rem !important;
+    }
 }
