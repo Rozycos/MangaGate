@@ -13,6 +13,23 @@
     height: 100%;
     border-bottom: 0.4rem;
     padding: 0 0 0 1.5rem;
+    &__element {
+        //position: relative;
+        padding: 0 1.5rem;
+        list-style: none;
+        display:flex;
+        align-items: center;
+    }
+    
+    &__link {
+        text-decoration: none;
+        color: $color-black;
+        
+        &:hover {
+            color: $color-black;
+            border-bottom: 2px solid $color-black;
+        }
+    }
 }
 
 .logo {
@@ -36,20 +53,22 @@
     justify-content: space-between;
 }
 
-.nav {
+// .nav {
     
-    &__element {
-        padding: 0 1.5rem;
-        list-style: none;
-    }
+//     &__element {
+//         padding: 0 1.5rem;
+//         list-style: none;
+//         display:flex;
+//         align-items: center;
+//     }
     
-    &__link {
-        text-decoration: none;
-        color: $color-black;
+//     &__link {
+//         text-decoration: none;
+//         color: $color-black;
         
-        &:hover {
-            color: $color-black;
-            border-bottom: 2px solid $color-black;
-        }
-    }
-}
+//         &:hover {
+//             color: $color-black;
+//             border-bottom: 2px solid $color-black;
+//         }
+//     }
+// }
