@@ -14,8 +14,8 @@ const LandingPage = () => {
                 <NewSection/>
                 <TrendingSection/>
                 <BlogSection/>
-                <Footer/>
             </main>
+            <Footer/>
         </>
     )
 }
