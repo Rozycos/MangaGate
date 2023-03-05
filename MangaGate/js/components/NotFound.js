@@ -9,7 +9,7 @@ const NotFound = () => {
       <h2 className="error">It looks like you're lost...</h2>
       <br/>
       <button className="btn error">
-        <Link className="nav__link" to="/">GO BACK HOME</Link>
+        <Link className="error__link" to="/">GO BACK HOME</Link>
       </button>
     </div>
     );
