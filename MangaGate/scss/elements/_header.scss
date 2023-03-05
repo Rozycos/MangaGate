@@ -1,7 +1,7 @@
 //header
 .header {
     color: $color-black;
-    height: 3.1115em;
+    //height: 3.1115em;
     background-color: $color-white;
 }
 
@@ -10,7 +10,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    //height: 100%;
+    height: 3.1115em;
     border-bottom: 0.4rem;
     padding: 0 0 0 1.5rem;
     &__element {

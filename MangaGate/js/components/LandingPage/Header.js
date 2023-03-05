@@ -21,7 +21,7 @@ const Header = () => {
                     
                 </nav>
                 
-                <section className="slider">
+                <section className=" container slider">
                     <div className="hero"></div>
                 </section>
             </header>
