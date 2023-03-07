@@ -20,6 +20,15 @@
         list-style: none;
         display:flex;
         align-items: center;
+
+        @include mobile {
+            display: none;
+        }
+        &:last-of-type {
+            @include mobile {
+                display: block;
+            }
+        }
     }
     
     &__link {
@@ -31,6 +40,7 @@
             border-bottom: 2px solid $color-black;
         }
     }
+
 }
 
 .logo {

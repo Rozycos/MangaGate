@@ -52,6 +52,13 @@
   margin: 4px;
 }
 
+.hide{
+  display:none;
+  @include mobile {
+    display: block;
+}
+}
+
 // .hamburger__nav {
 //   font-size: 0.62222rem;
 //   font-weight: 500;
