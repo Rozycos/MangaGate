@@ -56,7 +56,7 @@
     }
   }
 
-  .btn--login{
+  .btn__form{
     border-color: $color-white;
     background-color: $color-black;
     color: $color-white;
@@ -68,6 +68,9 @@
     //margin: 0 auto;
     //justify-self: center;
     //transform: translate(50%);
-    margin: 2rem 0 0 0;
+    
     cursor: pointer;
+    &--log{
+      margin: 2rem 1rem;
+    }
   }
