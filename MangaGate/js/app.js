@@ -6,6 +6,7 @@ import '../scss/main.scss';
 import AdminPanel from "./components/AppMain/AdminPanel";
 import LandingPage from "./components/LandingPage/index";
 import NotFound from "./components/NotFound";
+import Page from "./components/Page";
 
 const App = () => (
     <HashRouter>
@@ -14,6 +15,7 @@ const App = () => (
             <Route path={"admin"} element={<AdminPanel />}></Route>
             <Route path="*" element={<NotFound />} />
             <Route path={"firebase"} element={<FirebaseApp/>} />
+            <Route path={"page"} element={<Page/>} />
         </Routes>
     </HashRouter>
 )
