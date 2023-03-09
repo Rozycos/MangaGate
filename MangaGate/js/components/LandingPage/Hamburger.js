@@ -18,6 +18,7 @@ function Hamburger() {
       {isOpen && (
         <>
           <ul className="hamburger__nav">
+            <li className="hamburger__nav--element hide">{"User: " + localStorage.userName}</li>
             <li className="hamburger__nav--element hide"><Link className="hamburger__nav--link" to="/">Home</Link></li>
             <li className="hamburger__nav--element"><Link className="hamburger__nav--link" to="/action">Action</Link></li>
             <li className="hamburger__nav--element"><Link className="hamburger__nav--link" to="/comedy">Comedy</Link></li>
