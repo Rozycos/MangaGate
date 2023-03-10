@@ -72,10 +72,10 @@ const LoginForm = () => {
                     </div>    
                 </form>
                 <div>
-                    <button className="btn btn__form btn__form--log" onClick={handleSignIn}>
+                    <button className="btn btn__primary btn__form btn__form--log" onClick={handleSignIn}>
                             Login
                     </button>
-                    <button className="btn btn__form btn__form--log" onClick={handleSignUp}>
+                    <button className="btn btn__primary btn__form btn__form--log" onClick={handleSignUp}>
                             Sign In
                     </button>
                 </div>

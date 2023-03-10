@@ -17,15 +17,15 @@ const AppMain = () => {
     if (currentUser, localStorage.user === "bJthvWBjSxNqIifun0Zsu88MXDf1"){
       return (
         <>
-          <h2>Welcome to {localStorage.userName} admin panel</h2>
-          <button className="nav__element nav__link" onClick={handleSignOut}>LogOut</button>
+          <h2 style={{backgroundColor:"white"}}>Welcome to {localStorage.userName} admin panel</h2>
+          <button className="btn btn__primary btn__form" onClick={handleSignOut}>LogOut</button>
         </>
       )
     } else if (currentUser, localStorage.user){
         return (
           <>
             <h2>Sorry {localStorage.userName}, this feature isn't ready yet...</h2>
-            <button className="nav__element nav__link" onClick={handleSignOut}>LogOut</button>
+            <button className="btn btn__primary btn__form" onClick={handleSignOut}>LogOut</button>
           </>
         )
         } else {
