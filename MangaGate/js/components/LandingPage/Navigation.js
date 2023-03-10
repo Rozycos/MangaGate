@@ -8,7 +8,11 @@ const Navigation = (user) =>{
         <nav className="nav">
             <Link className="logo"to="/"><h1 className="logo__element">Manga<span>Gate.com</span></h1></Link>
             <ul className="header__nav">
+                {localStorage.userName === undefined ? (
+                <li className="nav__element"></li>
+                ) : (
                 <li className="nav__element">{"User: " + localStorage.userName}</li>
+                )}
                 <li className="nav__element"><Link className="nav__link" to="/">Home</Link></li>     
                 <li className="nav__element"><Hamburger /></li>                
             </ul>
