@@ -8,4 +8,8 @@
     border-color: $color-white;
     background-color: $color-black;
     color: $color-white;
+    
+    &:active{
+        border-color: $color-grey;
+    }
 }

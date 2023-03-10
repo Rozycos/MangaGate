@@ -4,20 +4,23 @@ import {HashRouter, Route, Routes} from "react-router-dom";
 import FirebaseApp from "../firebase_setup/FirebaseApp";
 import '../scss/main.scss';
 import AdminPanel from "./components/AppMain/AdminPanel";
+import UserProvider from "./components/context/UserProvider";
 import LandingPage from "./components/LandingPage/index";
 import NotFound from "./components/NotFound";
 import Page from "./components/Page";
 
 const App = () => (
-    <HashRouter>
-        <Routes>
-            <Route path={"/"} element={<LandingPage />}></Route>
-            <Route path={"admin"} element={<AdminPanel />}></Route>
-            <Route path="*" element={<NotFound />} />
-            <Route path={"firebase"} element={<FirebaseApp/>} />
-            <Route path={"page"} element={<Page/>} />
-        </Routes>
-    </HashRouter>
+    <UserProvider>
+        <HashRouter>
+            <Routes>
+                <Route path={"/"} element={<LandingPage />}></Route>
+                <Route path={"admin"} element={<AdminPanel />}></Route>
+                <Route path="*" element={<NotFound />} />
+                <Route path={"firebase"} element={<FirebaseApp/>} />
+                <Route path={"page"} element={<Page/>} />
+            </Routes>
+        </HashRouter>
+    </UserProvider>
 )
 
 const container = document.getElementById("app");
