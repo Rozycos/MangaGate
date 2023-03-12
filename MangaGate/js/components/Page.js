@@ -1,4 +1,5 @@
 import React from "react";
+import Articlelist from "./Database/ArticleList";
 import Footer from "./LandingPage/Footer";
 import Header from "./LandingPage/Header";
 import Navigation from "./LandingPage/Navigation";
@@ -37,6 +38,7 @@ const Page =()=>{
                         <h3><span className="title__section--subtitle">Subtitle</span></h3>
                     </section>
                     <section className="article article__container">
+                    <Articlelist/>
                         <p>
                             Aliquam porta nisl dolor, molestie pellentesque elit molestie in. Morbi metus neque, elementum ullamcorper hendrerit eget,      tincidunt et nisi. Sed magna nunc, consequat vel aliquam vitae, porta ac mi. Integer commodo sapien lacus, nec interdum nisi vehicula aliquam. Aliquam enim lorem, laoreet ut egestas quis, rutrum sed lectus. Duis et purus in dolor bibendum egestas vel vitae urna. Vestibulum dictum semper laoreet. Nulla augue tellus, aliquam mollis quam eget, maximus iaculis sem. Praesent semper ex tortor, in rhoncus arcu sollicitudin ut. Donec magna lorem, efficitur quis fringilla sed, imperdiet sed risus. Nam accumsan, elit sit amet pretium commodo, turpis augue molestie eros, quis maximus diam ex eget libero. Aliquam erat volutpat. Integer interdum arcu nisi. Cras venenatis lorem in molestie pulvinar. Donec a tortor et magna suscipit consectetur. 
                         </p>
