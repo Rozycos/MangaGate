@@ -8,8 +8,8 @@ const NotFound = () => {
       <br/>
       <h2 className="error">It looks like you're lost...</h2>
       <br/>
-      <button className="btn error">
-        <Link className="error__link" to="/">GO BACK HOME</Link>
+      <button className="btn btn__primary error error__link">
+        <Link className="error__link" to="/">Go Back Home</Link>
       </button>
     </div>
     );
