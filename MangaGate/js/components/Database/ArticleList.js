@@ -22,9 +22,7 @@ const ArticleList=() =>{
 
     return (
         <section>
-            <header>
-                <h2>Artykuły</h2>
-            </header>
+            <h2>Artykuły</h2>
 
             { loading && 
                 <p>loading...</p>
