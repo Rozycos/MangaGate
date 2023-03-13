@@ -31,7 +31,6 @@ export const findAll = async () => {
 
 
 
-
 //import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 
 // const docRef = doc(db, "articles");
