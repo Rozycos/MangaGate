@@ -25,6 +25,27 @@
     @include mobile {
         width: 310px;
     }
+    &--textarea{
+      display: flex;
+      flex-direction:row;
+      background-color: $color-white;
+      opacity: .8;
+      margin: 1rem 0;
+      height: 20.045em;
+      width: 25.375rem;
+      @include mobile {
+          width: 310px;
+      }
+    }
+    &--checkbox{
+      display: flex;
+      flex-direction:row;
+      background-color: $color-white;
+      opacity: .8;
+      margin: 1rem 0;
+      height: 2.045em;
+      width: 33%;
+    }
   }
   
   .form__label {
@@ -53,6 +74,9 @@
     //height: 46px;
     &:focus-visible {
         outline: none;
+    }
+    &--textarea{
+      line-height: 1rem;
     }
   }
 

@@ -1,5 +1,5 @@
 import { getDocs, collection } from "firebase/firestore"; 
-import React, {createContext, useState, useEffect} from "react";
+//import React, {createContext, useState, useEffect} from "react";
 import { auth } from "./firebase";
 import {db} from "./firebase";
 //import auth from "./firebase";
@@ -29,6 +29,10 @@ export const findAll = async () => {
     return res
 }
 
+// export const CountNumber = async () =>{
+//     const snapshot = await getCountFromServer(collection_name);
+//     console.log('count: ', snapshot.data().count);
+// }
 
 
 //import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
