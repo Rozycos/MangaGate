@@ -46,6 +46,12 @@
       height: 2.045em;
       width: 33%;
     }
+    &--subscribe{
+      width: 18.0rem;
+      @include tablet {
+        width: 16.0rem;
+    }
+    }
   }
   
   .form__label {
@@ -77,6 +83,17 @@
     }
     &--textarea{
       line-height: 1rem;
+    }
+    &--button{
+      z-index:100;
+      font-size: 1rem;
+      border:none;
+      background-color: $color-white;
+      opacity: .8;
+      cursor: pointer;
+      &:active{
+        background-color: $color-light-grey;
+    }
     }
   }
 

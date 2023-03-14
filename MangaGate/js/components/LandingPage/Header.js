@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import Hamburger from "./Hamburger";
 import Navigation from "./Navigation";
-import Slider from "./Slider";
+import Hero from "./Hero";
 
 const Header = () => {
 
@@ -11,7 +11,7 @@ const Header = () => {
         <>
             <header className="header container">
                 <Navigation/>
-                <Slider/>
+                <Hero/>
             </header>
         </>
     )
