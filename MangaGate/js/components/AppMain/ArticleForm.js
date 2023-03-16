@@ -1,86 +1,10 @@
-// import React, { useState, useReducer } from "react";
-// import AddArticle from "../Database/AddArticle";
-
-
-// const ArticleForm = (props) =>{
-//     const [inputsContent, setInputsContent] = useReducer(
-//         (state, newState) => ({ ...state, ...newState }),
-//         {
-//           imageURL: "",
-//           title: "",
-//           subtitle: "",
-//           postURL: "",
-//           postText: "",
-//           isPublish: false
-//         }
-//       );
-//       const { imageURL, title, subtitle, postURL, postText, isPublish } = inputsContent;
-    
-//       const handleInputChange = e => {
-//         setInputsContent({
-//           [e.target.name]: e.target.value
-//         });
-//       };
-    
-//       const handleSubmit = e => {
-//         e.preventDefault();
-//         const newArticle = {
-//             imageURL,
-//             title,
-//             subtitle,
-//             postURL,
-//             postText,
-//             isPublish
-//         };
-//         handleCreate(newArticle);
-//         setInputsContent({
-//             imageURL: "",
-//             title: "",
-//             subtitle: "",
-//             postURL: "",
-//             postText: "",
-//             isPublish: false
-//         });
-//       };
-//const ArticleForm = (props) =>{
-//    }
-
-// import React, { useState } from "react";
-
-// const ArticleForm=(props)=> {
-
-//     const [ newArticles, setNewArticles ] = useState("")
-
-//     const handleInputChange = (e) => setNewArticles(e.target.value)
-
-//     const handleSubmit = () => {
-//         props.createArticle({
-//                       imageURL: newArticles,
-//                     })
-//         setNewArticles("")
-//     }
-
 import React, {useState, useReducer} from 'react';
 import { Timestamp, addDoc, collection } from "firebase/firestore"; 
 import {getDb} from '../../../firebase_setup/db';
-//import ArticleCheckbox from './ArticleCheckbox';
-//import { doc, setDoc } from "firebase/firestore";
-//import { doc, getDoc, addDoc, collection } from "firebase/firestore"; 
-//import database from '../../../firebase_setup/firebase';
-//import { getDb } from "./db";
-
-//const collection_name = "articles"
+//import { Categories } from '../context/Categories';
 
 const ArticleForm = () => {
-    //const doc_refs = addDoc(collection(getDb(), collection_name));
-//     // const [imageURL , setimageURL] = useState();
-//     // const [title , settitle] = useState();
-//     // const [subtitle , setsubtitle] = useState();
-//     // const [postURL , setpostURL] = useState();
-//     // const [postText , setpostText] = useState();
-//     // const [isPublish , setIsPublish] = useState();
-    //const [checked, setChecked] = useState(false);
-    //const [isPublish, setIsPublish] = useState(false);
+
 
     const [isPublish, setIsPublish] = useState(false);
     const [action, setAction] = useState(false);
@@ -90,19 +14,6 @@ const ArticleForm = () => {
     const [fantasy, setFantasy] = useState(false);
     const [other, setOther] = useState(false);
     
-//     useReducer(
-//     (statex, newStatex) => ({ ...statex, ...newStatex }),
-//     {
-//         isPublish: false,
-//         action: false,
-//         comedy: false,
-//         drama: false,
-//         military: false,
-//         fantasy: false,
-//         other: false,
-//     }
-// );
-
 
 
     const [inputsContent, setInputsContent] = useReducer(
@@ -116,22 +27,7 @@ const ArticleForm = () => {
         //   isPublish: false
         }
 );
-const { imageURL, title, subtitle, postURL, postText} = inputsContent;
-
-//     // Push Function
-//     const Push = () => {
-//         const doc_refs = getDocs(collection(getDb(), collection_name));
-//         //doc_refs.ref("articles").set({
-//         await setDoc(doc_refs new 
-//         imageURL: imageURL,
-//         title: title,
-//         subtitle: subtitle,
-//         postURL: postURL,
-//         postText: postText,
-//         isPublish: isPublish
-//       }).catch(alert);
-//     }
-    
+const { imageURL, title, subtitle, postURL, postText} = inputsContent; 
 
     const handleInputChange = e => {
         setInputsContent({
@@ -177,12 +73,12 @@ const { imageURL, title, subtitle, postURL, postText} = inputsContent;
             postURL: postURL,
             postText: postText,
             isPublish: isPublish,
-            action: isPublish,
-            comedy: isPublish,
-            drama: isPublish,
-            military: isPublish,
-            fantasy: isPublish,
-            other: isPublish,
+            action: action,
+            comedy: comedy,
+            drama: drama,
+            military: military,
+            fantasy: fantasy,
+            other: other,
             created: Timestamp.now()
           })
           //onClose()

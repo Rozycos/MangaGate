@@ -13,3 +13,30 @@
     justify-content: center;
     flex-direction: column;
 }
+
+.admin{
+    &__nav{
+        display:flex;
+        flex-direction: column;
+        background-color: rgba(255,255,255, 0.6);
+        width:100%;
+        h2{
+            margin: .5rem 0 0 0;
+            align-self: center;
+        }
+        span{
+            margin: 0.5rem 0 ;
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+    }
+    &__link{
+        text-decoration: none;
+        color: $color-white;
+    }
+}
+
+.btn__logout{
+    background-color: red;
+}

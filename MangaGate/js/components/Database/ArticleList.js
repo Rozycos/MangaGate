@@ -11,7 +11,7 @@ const ArticleList=() =>{
         setLoading(true)
 
         const res = await findAll()
-
+        
         setArticles([...res])
         setLoading(false)
     }
@@ -21,7 +21,7 @@ const ArticleList=() =>{
     }, [])
 
     return (
-        <section>
+        <section className="container ">
             <h2>Artykuły</h2>
 
             { loading && 

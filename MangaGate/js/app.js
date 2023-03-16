@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import {HashRouter, Route, Routes} from "react-router-dom";
 import '../scss/main.scss';
+import AddNewPage from "./components/AppMain/AddNewPage";
 import AdminPanel from "./components/AppMain/AdminPanel";
 import UserProvider from "./components/context/UserProvider";
 import LandingPage from "./components/LandingPage/index";
@@ -14,6 +15,7 @@ const App = () => (
             <Routes>
                 <Route path={"/"} element={<LandingPage />}></Route>
                 <Route path={"admin"} element={<AdminPanel />}></Route>
+                <Route path={"admin/addnew"} element={<AddNewPage />}></Route>
                 <Route path="*" element={<NotFound />} />
                 <Route path={"page"} element={<Page/>} />
             </Routes>
