@@ -1,6 +1,7 @@
 import React, {useState, useReducer} from 'react';
 import { Timestamp, addDoc, collection } from "firebase/firestore"; 
 import {getDb} from '../../../firebase_setup/db';
+import { Link } from 'react-router-dom';
 //import { Categories } from '../context/Categories';
 
 const ArticleForm = () => {
@@ -139,7 +140,7 @@ const { imageURL, title, subtitle, postURL, postText} = inputsContent;
                             Previev
                     </button>
                     <button className="btn btn__primary btn__form btn__form--log" onClick={handleSubmit}>
-                            Submit
+                        <Link className="hamburger__nav--link" to="/admin">Submit</Link>
                     </button>
                 </div>
             </div>

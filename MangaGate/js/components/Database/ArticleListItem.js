@@ -1,16 +1,18 @@
 import React from "react";
 
 const ArticleListItem=(props)=> {
-    const { articles } = props
+    const { articles, width } = props
     
     return (
-        <li>
+        <li className="box__article--list">
             <div>
-                <img src={articles.imageURL} width="350px" />
+                <img src={articles.imageURL} />
             </div>
             <div>   
-                <h3>{articles.title} {articles.subTitle}</h3>
-                <p style={{overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis", maxWidth: "950px"}}>{articles.postText}{articles.id}</p>
+                <h3>{articles.title}</h3>
+                <p>{articles.postText}</p>
+                <button className="btn btn__primary btn__form">Edit</button>
+                <button className="btn btn__primary btn__form btn__logout">Delete</button>
             </div> 
         </li>
     )
@@ -18,9 +20,3 @@ const ArticleListItem=(props)=> {
 
 export default ArticleListItem;
 
-// p {
-//     display: -webkit-box;
-//     overflow: hidden;
-//     -webkit-line-clamp: 3;
-//     -webkit-box-orient: vertical;
-//   }

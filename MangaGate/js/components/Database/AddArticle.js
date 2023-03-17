@@ -40,39 +40,39 @@
   
 //   export default AddArticle;
 
-import { useState, useEffect } from 'react'
-import ArticleForm from '../AppMain/ArticleForm.js'
-import { findAll } from '../../../firebase_setup/GetArticles'
-//import AddTodoBar from './add-todo-bar.js'
-//import TodoListItem from './todo-list-item.js'
+// import { useState, useEffect } from 'react'
+// import ArticleForm from '../AppMain/ArticleForm.js'
+// import { findAll } from '../../../firebase_setup/GetArticles'
+// //import AddTodoBar from './add-todo-bar.js'
+// //import TodoListItem from './todo-list-item.js'
 
-function AddArticle() {
-    const [loading, setLoading] = useState(false)
-    const [articles, setArticles] = useState([])
+// function AddArticle() {
+//     const [loading, setLoading] = useState(false)
+//     const [articles, setArticles] = useState([])
 
-    const fetchData = async () => {
-        setLoading(true)
+//     const fetchData = async () => {
+//         setLoading(true)
 
-        const res = await findAll()
+//         const res = await findAll()
 
-        setArticles([...res])
-        setLoading(false)
-    }
+//         setArticles([...res])
+//         setLoading(false)
+//     }
 
-    const createArticle = async args => {
-        const res = await create(args)
+//     const createArticle = async args => {
+//         const res = await create(args)
 
-        setArticles([...articles, {
-            id: res.id,
-            ...args
-        }])
-    }
+//         setArticles([...articles, {
+//             id: res.id,
+//             ...args
+//         }])
+//     }
 
-    useEffect(() => {
-        fetchData()
-    }, [])
+//     useEffect(() => {
+//         fetchData()
+//     }, [])
 
-    return 
-}
+//     return 
+// }
 
-export default AddArticle;
+// export default AddArticle;

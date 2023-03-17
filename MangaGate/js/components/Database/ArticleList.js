@@ -21,18 +21,19 @@ const ArticleList=() =>{
     }, [])
 
     return (
-        <section className="container ">
-            <h2>Artykuły</h2>
+        <section className="container box__article">
+            {/* <h2>Artykuły</h2> */}
+            <div >
+                { loading && 
+                    <p>loading...</p>
+                }
 
-            { loading && 
-                <p>loading...</p>
-            }
-
-            <ul>
-                {articles.length > 0 && articles.map(articles => (
-                    <ArticleListItem key={articles.id} articles={articles}/>
-                ))}
-            </ul>
+                <ul>
+                    {articles.length > 0 && articles.map(articles => (
+                        <ArticleListItem key={articles.id} articles={articles} width={"350px"}/>
+                    ))}
+                </ul>
+            </div>
         </section>
     )
 }
