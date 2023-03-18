@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 
 const ArticleListItem=(props)=> {
     const { articles, width } = props
@@ -12,9 +12,12 @@ const ArticleListItem=(props)=> {
             <div>   
                 <h3>{articles.title}</h3>
                 <p>{articles.postText}</p>
-                <Link to="/page/article/dupa">link</Link>
                 <button className="btn btn__primary btn__form">Edit</button>
                 <button className="btn btn__primary btn__form btn__logout">Delete</button>
+                <button className="btn btn__primary btn__form">
+                    <NavLink className="admin__link" to={`/page/${articles.id}/${articles.postURL}`}>Read more...</NavLink>
+                    {/* <NavLink className="admin__link" to={`/page/${articles.postURL}/${articles.id}`}>Read more...</NavLink> */}
+                </button>
             </div> 
         </li>
     )

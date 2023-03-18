@@ -27,8 +27,14 @@ export const findAll = async () => {
     })
 
     return res
-}
+};
 
+export const findOne = async id => {
+    const d = await getDoc(doc(getDb(), collection_name, id)) 
+    return d.data()
+};
+
+//console.log(findOne("37buDCJQJdp6x6L66AAU"))
 // export const CountNumber = async () =>{
 //     const snapshot = await getCountFromServer(collection_name);
 //     console.log('count: ', snapshot.data().count);

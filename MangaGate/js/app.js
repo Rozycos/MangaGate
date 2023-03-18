@@ -7,7 +7,7 @@ import AdminPanel from "./components/AppMain/AdminPanel";
 import UserProvider from "./components/context/UserProvider";
 import LandingPage from "./components/LandingPage/index";
 import NotFound from "./components/NotFound";
-import Page from "./components/Page";
+import Page from "./components/SinglePage/Page";
 
 const App = () => (
     <UserProvider>
@@ -17,7 +17,10 @@ const App = () => (
                 <Route path={"admin"} element={<AdminPanel />}></Route>
                 <Route path={"admin/addnew"} element={<AddNewPage />}></Route>
                 <Route path="*" element={<NotFound />} />
-                <Route path={"page"} element={<Page/>} />
+                <Route path={"page"} element={<Page/>}>
+                    <Route path={":articleId/:articleUrl"} element={<Page/>} />
+                    {/* <Route path={":articleUrl/:articleId"} element={<Page/>} /> */}
+                </Route>
             </Routes>
         </HashRouter>
     </UserProvider>
