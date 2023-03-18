@@ -1,11 +1,12 @@
 import React, {useState, useReducer} from 'react';
 import { Timestamp, addDoc, collection } from "firebase/firestore"; 
 import {getDb} from '../../../firebase_setup/db';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
 //import { Categories } from '../context/Categories';
+//import { useHistory } from 'react-router-dom';
 
 const ArticleForm = () => {
-
+    const navigate = useNavigate();
 
     const [isPublish, setIsPublish] = useState(false);
     const [action, setAction] = useState(false);
@@ -66,6 +67,18 @@ const { imageURL, title, subtitle, postURL, postText} = inputsContent;
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+// if(inputsContent === ""){
+
+//{!inputsContent.title || !inputsContent.subtitle || !inputsContent.postURL} alert("wypełnij wszystkie pola");
+
+//alert("wypełnij wszystkie pola");
+// }else{
+//    alert(JSON.stringify(inputsContent, null, 2));
+
+// if (inputsContent.title === "" || inputsContent.subtitle === "" || inputsContent.postURL ==="")
+//     {alert("wszystkie pola muszą być wypełnione")}
+
+
         try {
           await addDoc(collection(getDb(), 'articles'), {
             imageURL: imageURL,
@@ -82,7 +95,9 @@ const { imageURL, title, subtitle, postURL, postText} = inputsContent;
             other: other,
             created: Timestamp.now()
           })
-          //onClose()
+
+          alert("Your data is saved!")
+          navigate('/admin');
         } catch (err) {
           alert(err)
         }
@@ -97,18 +112,22 @@ const { imageURL, title, subtitle, postURL, postText} = inputsContent;
                         <input className="form__input" type="text" name="imageURL" id="imageURL" placeholder="Enter image URL" onChange={handleInputChange}/>
                         {/* <input className="form__input" type="text" name="imageURL" id="imageURL" placeholder="Enter image URL" onChange={handleInputChange}/> */}
                     </div>
+                    <span>*required field</span>
                     <div className="form__field">
                         <label className="form__label">Title</label>
                         <input className="form__input" type="text" name="title" id="title" placeholder="Enter post title" onChange={handleInputChange}/>
                     </div>
+                    <span>*required field</span>
                     <div className="form__field">
                         <label className="form__label">Subtitle</label>
                         <input className="form__input" type="text" name="subtitle" id="subtitle" placeholder="Enter post subtitle" onChange={handleInputChange}/>
                     </div>
+                    <span>*required field</span>
                     <div className="form__field">
                         <label className="form__label">Post URL</label>
                         <input className="form__input" type="text" name="postURL" id="postURL" placeholder="Enter post URL" onChange={handleInputChange}/>
-                    </div>   
+                    </div>  
+                    <span>*required field</span> 
                     <div className="form__field--textarea">
                         <label className="form__label" >Post text</label>
                         <textarea className="form__input form__input--textarea" name="postText" id="postText" rows="5" cols="33" placeholder="Article" onChange={handleInputChange}/>
@@ -139,8 +158,8 @@ const { imageURL, title, subtitle, postURL, postText} = inputsContent;
                     {/* </button><button className="btn btn__primary btn__form btn__form--log" onClick={handlePreview}> */}
                             Previev
                     </button>
-                    <button className="btn btn__primary btn__form btn__form--log" onClick={handleSubmit}>
-                        <Link className="hamburger__nav--link" to="/admin">Submit</Link>
+                    <button className="btn btn__primary btn__form btn__form--log" disabled={!inputsContent.title || !inputsContent.subtitle || !inputsContent.postURL} onClick={handleSubmit}>Submit
+                        {/* <Link className="admin__link" to="/admin">Submit</Link> */}
                     </button>
                 </div>
             </div>

@@ -1,44 +1,44 @@
-// import React, { useState, useEffect } from "react";
-// import { firestore } from "../../../firebase_setup";
-// import ArticleForm from "../AppMain/ArticleForm";
+// // import React, { useState, useEffect } from "react";
+// // import { firestore } from "../../../firebase_setup";
+// // import ArticleForm from "../AppMain/ArticleForm";
 
-// const AddArticle = () => {
-//     const [creators, setCreators] = useState([]);
-//     const creatorsCollection = firestore.collection("articles");
+// // const AddArticle = () => {
+// //     const [creators, setCreators] = useState([]);
+// //     const creatorsCollection = firestore.collection("articles");
   
-//     const documentsCollection = doc => {
-//       return { id: doc.id, ...doc.data() };
-//     };
+// //     const documentsCollection = doc => {
+// //       return { id: doc.id, ...doc.data() };
+// //     };
   
-//     useEffect(() => {
-//       const subscribe = creatorsCollection
-//         .orderBy("title", "subtitle")
-//         .onSnapshot(snapshot => {
-//           const dataFromCollection = snapshot.docs.map(documentsCollection);
-//           setCreators(dataFromCollection);
-//         });
-//       return () => subscribe;
-//     }, []);
+// //     useEffect(() => {
+// //       const subscribe = creatorsCollection
+// //         .orderBy("title", "subtitle")
+// //         .onSnapshot(snapshot => {
+// //           const dataFromCollection = snapshot.docs.map(documentsCollection);
+// //           setCreators(dataFromCollection);
+// //         });
+// //       return () => subscribe;
+// //     }, []);
   
-//     const handleCreate = creatorToAdd => {
-//       creatorsCollection.add(creatorToAdd);
-//       setCreators([creatorToAdd, ...creators]);
-//     };
+// //     const handleCreate = creatorToAdd => {
+// //       creatorsCollection.add(creatorToAdd);
+// //       setCreators([creatorToAdd, ...creators]);
+// //     };
   
-//     return (
-//       <StyledContainer>
-//         <StyledWrapper>
-//           <StyledHeading>Twórcy</StyledHeading>
-//           {/* {creators.map(({ id, name, photo, website }) => (
-//             <CreatorCard key={id} name={name} photo={photo} website={website} />
-//           ))} */}
-//         </StyledWrapper>
-//         <ArticleForm handleCreate={handleCreate} />
-//       </StyledContainer>
-//     );
-//   };
+// //     return (
+// //       <StyledContainer>
+// //         <StyledWrapper>
+// //           <StyledHeading>Twórcy</StyledHeading>
+// //           {/* {creators.map(({ id, name, photo, website }) => (
+// //             <CreatorCard key={id} name={name} photo={photo} website={website} />
+// //           ))} */}
+// //         </StyledWrapper>
+// //         <ArticleForm handleCreate={handleCreate} />
+// //       </StyledContainer>
+// //     );
+// //   };
   
-//   export default AddArticle;
+// //   export default AddArticle;
 
 // import { useState, useEffect } from 'react'
 // import ArticleForm from '../AppMain/ArticleForm.js'

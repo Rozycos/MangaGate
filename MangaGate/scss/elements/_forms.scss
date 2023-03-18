@@ -12,6 +12,13 @@
     @include mobile {
         width: 310px;
     }
+    span{
+      //position:absolute;
+      //top: auto;
+      font-size: .5rem;
+      color: red;
+
+    }
   }
   
   .form__field {
@@ -19,7 +26,7 @@
     flex-direction:row;
     background-color: $color-white;
     opacity: .8;
-    margin: 1rem 0;
+    margin: 1.5rem 0 0;
     height: 2.045em;
     width: 25.375rem;
     @include mobile {
