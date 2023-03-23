@@ -24,7 +24,7 @@ const ArticleListItem=(props)=> {
 
     
     return (
-        <li className="box__article--list">
+        <li className="box__article--list" >
             <div>
                 <img src={articles.imageURL} />
             </div>

@@ -35,6 +35,11 @@
         text-decoration: none;
         color: $color-white;
     }
+    &__paginator{
+        display: flex;
+        justify-content:flex-end;
+        padding: .5rem;
+    }
 }
 
 .btn__logout{

@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+//import { AppContext } from '../context/UserProvider';
 
 function Hamburger() {
+  //const{currentUser} = useContext(AppContext)
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -18,7 +20,7 @@ function Hamburger() {
       {isOpen && (
         <>
           <ul className="hamburger__nav">
-            <li className="hamburger__nav--element hide">{"User: " + localStorage.userName}</li>
+            {/* <li className="hamburger__nav--element hide">{"User: " + currentUser.email}</li> */}
             <li className="hamburger__nav--element hide"><Link className="hamburger__nav--link" to="/">Home</Link></li>
             <li className="hamburger__nav--element"><Link className="hamburger__nav--link" to="/action">Action</Link></li>
             <li className="hamburger__nav--element"><Link className="hamburger__nav--link" to="/comedy">Comedy</Link></li>

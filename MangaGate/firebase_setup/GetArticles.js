@@ -18,9 +18,15 @@ const collection_name = "articles"
 export const findAll = async () => {
     const collection_ref = collection(getDb(), collection_name);
     //const q = query(collection_ref, where("isPublish", "==", true), where("drama", "==", true), where("comedy", "==", true), limit(5)); needs to create index (click on link in console)
-    const q = query(collection_ref, orderBy("created", "desc"));
+    const q = query(collection_ref, orderBy("created", "desc"), limit(5));
+    //const q = query(collection_ref, orderBy("created", "desc"), startAt(doc_refs));
     //const q = query(collection_ref, where("isPublish", "==", true), orderBy("created", "desc")); needs to create index (click on link in console)
     const doc_refs = await getDocs(q);
+    // const lastVisible = documentSnapshots.docs[documentSnapshots.docs.length-1];
+    // const next = query(collection_ref,
+    // orderBy("created", "desc"),
+    // startAfter(lastVisible),
+    // limit(5));
 
     const res = []
 
