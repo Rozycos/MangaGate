@@ -8,8 +8,10 @@ import { getDb } from "../../../firebase_setup/db";
 
 const collection_name = "articles";
 const limitNumber = 5;
-let block = false
-
+//let block = false
+// const coll = collection(getDb(), collection_name);
+// const snapshot = await getCountFromServer(coll);
+// console.log('count: ', snapshot.data().count);
 
 const ArticleList=() =>{
     const [list, setList] = useState([]);
@@ -22,9 +24,10 @@ const ArticleList=() =>{
     useEffect(() => {
         const fetchData = async () => {
             const collection_ref = collection(getDb(), collection_name);
-            const q = query(collection_ref, where("isPublish", "==", true), orderBy("created", "desc"), limit(limitNumber));
-
+            //const q = query(collection_ref, where("isPublish", "==", true), orderBy("created", "desc"), limit(limitNumber));
+            const q = query(collection_ref, orderBy("created", "desc"), limit(limitNumber));
             const doc_refs = await getDocs(q);
+            // const doc_length = await getDocs();
             
                     const items = [];
                     doc_refs.forEach(articles => {
@@ -50,7 +53,7 @@ const ArticleList=() =>{
         // } else {
             const fetchNextData = async () => {
             const collection_ref = collection(getDb(), collection_name);
-            const q = query(collection_ref, where("isPublish", "==", true), orderBy("created", "desc"), startAfter(item.created), limit(limitNumber) );
+            const q = query(collection_ref, orderBy("created", "desc"), startAfter(item.created), limit(limitNumber) );
 
             const doc_refs = await getDocs(q);
             
@@ -76,7 +79,7 @@ const ArticleList=() =>{
         
         const fetchPreviousData = async () => {
             const collection_ref = collection(getDb(), collection_name);
-            const q = query(collection_ref, where("isPublish", "==", true), orderBy("created", "desc"), endBefore(item.created), limitToLast(limitNumber) );
+            const q = query(collection_ref, orderBy("created", "desc"), endBefore(item.created), limitToLast(limitNumber) );
             const doc_refs = await getDocs(q);
             const items = [];
             doc_refs.forEach(articles => {

@@ -2,7 +2,7 @@ import React from "react";
 import BlogSection from "./BlogSection";
 import Footer from "./Footer";
 import Header from "./Header";
-import NewSection from "./NewSection";
+import NewSection from "../LandingPage/NewSection/NewSection";
 import TrendingSection from "./TrendingSection";
 // //import '../scss/main.scss';
 
