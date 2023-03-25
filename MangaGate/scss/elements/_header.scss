@@ -50,11 +50,14 @@
     &__element {
         font-family: $logo-font;
         font-size: 1em;
+        &--sec{
+            font-family: $font-poppins;
+        }
     }
     
-    span {
-        font-family: $font-poppins;
-    }
+    // span {
+    //     font-family: $font-poppins;
+    // }
 }
 
 .header__nav {

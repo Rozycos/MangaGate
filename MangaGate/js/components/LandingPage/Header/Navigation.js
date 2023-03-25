@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from 'react-router-dom';
-import { AppContext } from "../context/UserProvider";
+import { AppContext } from "../../context/UserProvider";
 import Hamburger from './Hamburger';
 
 const Navigation = () =>{
     const{currentUser} = useContext(AppContext)
     return (
         <nav className="nav">
-            <Link className="logo"to="/"><h1 className="logo__element">Manga<span>Gate.com</span></h1></Link>
+            <Link className="logo"to="/"><h1 className="logo__element">Manga<span className="logo__element--sec">Gate.com</span></h1></Link>
             <ul className="header__nav">
                 {currentUser === null ? (
                 <li className="nav__element"></li>

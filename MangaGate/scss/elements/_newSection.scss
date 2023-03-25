@@ -1,5 +1,5 @@
 .section__new {
-    min-height: 900px;
+    //min-height: 900px;
     background: $color-white;
     &--container{
         width: 1272px;
@@ -43,7 +43,7 @@
             //background: $color-black;
             //width:1rem;
             background: $color-light-grey;
-            width:95%;
+            width:98%;
         }
     }
     
@@ -109,6 +109,12 @@
         }
         &-link{
             font-size: 0.8rem;
+            text-decoration: none;
+            //text-align: left;
+            font-weight: 700;
+            //font-size: 17.1325px;
+            line-height: 26px;
+            color: $color-black;
             //margin: 0 auto;
             //justify-self: end;
         }
@@ -131,10 +137,9 @@
         //background-position: center;
         width:100%;
     }
-    
 }
 
-span:nth-child(2n){
+.new__box--span:nth-child(2n){
     display: flex;
     flex-direction: row-reverse;
        // @include mobile {
@@ -165,4 +170,8 @@ span:nth-child(2n){
 .paginator{
     display: flex;
     justify-content: flex-end;
+    gap: 1rem;
+    padding: 1rem 1rem 0 0;
+    //transform: translateY(125px);
+    //width: 10rem;
 }

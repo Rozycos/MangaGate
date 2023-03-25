@@ -1,4 +1,49 @@
 .section__blog {
-    min-height: 900px;
+    //min-height: 900px;
     background: $color-white;
+    &--container{
+        width: 1272px;
+        height: 100%;
+        margin: 0 auto;
+       
+        @include notebook {
+            width: 100%;
+            ///padding: 0 1rem !important;
+        }
+        
+    }
+
+    &--header{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.0667rem;
+        line-height: 1.2444rem;
+        /* identical to box height, or 117% */
+        letter-spacing: 0.5px;
+        padding: 85px 0 21px 0;
+        @include mobile {
+            padding: 10% 0 21px 0;
+        }
+
+        &::before{
+            content:"";
+            display: block;
+            position:relative;
+            height: 2px;
+            background: $color-black;
+            border-radius: 1px;
+            width:1rem;
+            //flex-grow: 1;
+            top: 1.35rem;
+        }
+        &::after{
+            content:"";
+            display: block;
+            height: 2px;
+            //background: $color-black;
+            //width:1rem;
+            background: $color-light-grey;
+            width:98%;
+        }
+    }
 }

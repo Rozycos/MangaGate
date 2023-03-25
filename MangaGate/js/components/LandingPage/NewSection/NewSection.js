@@ -15,7 +15,7 @@ const NewSection =()=>{
     const [list, setList] = useState([]);
     const [page, setPage] = useState(1);
     const [nextButtonDisabled, setNextButtonDisabled] = useState(false);
-    //const [lastPag, setLastPage] = useState(0);
+    const [showLastPage, setShowLastPage] = useState(0);
     //const [prevButtonDisabled, setPrevButtonDisabled] = useState(false);
     //const [onClickHandle, setOnClickHandle] = useState()
     const [pending, setPending] = useState(false);
@@ -24,9 +24,9 @@ const NewSection =()=>{
         const fetchData = async () => {
             const collection_ref = collection(getDb(), collection_name);
             const q = query(collection_ref, where("isPublish", "==", true), orderBy("created", "desc"), limit(limitNumber));
-            // const q2 = query(collection_ref, where("isPublish", "==", true));
-            // const snapshot = await getCountFromServer(q2);
-            // const lastPage = Math.ceil((snapshot.data().count)/limitNumber)
+            const q2 = query(collection_ref, where("isPublish", "==", true));
+            const snapshot = await getCountFromServer(q2);
+            const lastPage = Math.floor((snapshot.data().count)/limitNumber)
             
             const doc_refs = await getDocs(q);
             
@@ -42,8 +42,9 @@ const NewSection =()=>{
                     //console.log(snapshot.data().count)
                     console.log("list length", list.length)
                     
-                    //console.log(lastPage)
+                    console.log(lastPage)
                     setList(items);
+                    setShowLastPage(lastPage);
                 
         };
         fetchData();
@@ -144,7 +145,7 @@ const NewSection =()=>{
                 </span> */}
                 <span className="paginator">
                     <button className="btn__paginator" disabled={page === 1 } onClick={() => showPrevious({ item: list[0] }) }>&#171;</button>
-                    <button className="btn__paginator" disabled={list.length < limitNumber || nextButtonDisabled || page === 4 } onClick={() => showNext({ item: list[list.length - 1] })}>&#187;</button>
+                    <button className="btn__paginator" disabled={list.length < limitNumber || nextButtonDisabled || page === showLastPage -1 } onClick={() => showNext({ item: list[list.length - 1] })}>&#187;</button>
                 </span>
             </div>
             

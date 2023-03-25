@@ -38,6 +38,37 @@
             font-weight: 900;
         }
     }
+    &--subtitle{
+        font-family: $font-varela;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5555rem;
+        line-height: 200%;
+        text-align: center;
+        letter-spacing: 7.56px;
+        text-transform: uppercase;
+        color:$color-black-tertiary;
+        &::before{
+            content:"";
+            display: block;
+            position:relative;
+            height: 2px;
+            background: $color-black;
+            border-radius: 1px;
+            width:1rem;
+            //flex-grow: 1;
+            top: 3.231111rem;
+        }
+        &::after{
+            content:"";
+            display: block;
+            height: 2px;
+            //background: $color-black;
+            //width:1rem;
+            background: $color-light-grey;
+            width:95%;
+        }
+    }
 
 }
 
@@ -89,5 +120,9 @@
             font-size: .8rem;
             //line-height: 0.86rem;
         }
+    }
+    p{
+        margin:0;
+        padding: 0 0 1rem 0;
     }
 }

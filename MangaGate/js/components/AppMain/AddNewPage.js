@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import ArticleForm from "./ArticleForm";
 import { auth } from "../../../firebase_setup/firebase";
-import Navigation from "../LandingPage/Navigation";
+import Navigation from "../LandingPage/Header/Navigation";
 import LoginForm from "./LoginForm";
 import { AppContext } from "../context/UserProvider";
 import Sidebar from "./AdminNav";

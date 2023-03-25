@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 //import { findAll } from '../../../firebase_setup/GetArticles';
 import ArticleListItem from './ArticleListItem';
 import { query, where, orderBy, limit, endBefore, startAfter, limitToLast } from "firebase/firestore";
-import { getDocs, collection, docs, doc } from "firebase/firestore"; 
+import { getDocs, collection, docs, doc, getCountFromServer } from "firebase/firestore"; 
 import { getDb } from "../../../firebase_setup/db";
 
 const collection_name = "articles";
@@ -17,6 +17,7 @@ const ArticleList=() =>{
     const [list, setList] = useState([]);
     const [page, setPage] = useState(1);
     const [nextButtonDisabled, setNextButtonDisabled] = useState(false);
+    const [showLastPage, setShowLastPage] = useState(0);
     //const [prevButtonDisabled, setPrevButtonDisabled] = useState(false);
     //const [onClickHandle, setOnClickHandle] = useState()
     const [pending, setPending] = useState(false);
@@ -26,6 +27,10 @@ const ArticleList=() =>{
             const collection_ref = collection(getDb(), collection_name);
             //const q = query(collection_ref, where("isPublish", "==", true), orderBy("created", "desc"), limit(limitNumber));
             const q = query(collection_ref, orderBy("created", "desc"), limit(limitNumber));
+            const q2 = query(collection_ref);
+            const snapshot = await getCountFromServer(q2);
+            const lastPage = Math.ceil((snapshot.data().count)/limitNumber)
+
             const doc_refs = await getDocs(q);
             // const doc_length = await getDocs();
             
@@ -41,6 +46,7 @@ const ArticleList=() =>{
                     // console.log(list)
                     console.log("list length", list.length)
                     setList(items);
+                    setShowLastPage(lastPage);
                 
         };
         fetchData();
@@ -123,8 +129,7 @@ const ArticleList=() =>{
                 //list.length < limitNumber ? 
                 //<button disabled={true}>Next</button> :
                 //page + 1 === 0? <button disabled>Next</button> : 
-                <button className="btn btn__primary btn__form" disabled={list.length < limitNumber || nextButtonDisabled} onClick={() => showNext({ item: list[list.length - 1] })}>Next &#8811;</button>
-                //<button disabled={buttonDisabled} onClick={onClickHandle}>Next</button>
+                <button className="btn btn__primary btn__form" disabled={list.length < limitNumber || nextButtonDisabled|| page === showLastPage } onClick={() => showNext({ item: list[list.length - 1] })}>Next &#8811;</button>
             }
             </div>
             </div>

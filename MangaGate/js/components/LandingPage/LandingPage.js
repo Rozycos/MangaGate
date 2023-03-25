@@ -1,9 +1,8 @@
 import React from "react";
-import BlogSection from "./BlogSection";
+import BlogSection from "./BlogSection/BlogSection";
 import Footer from "./Footer";
-import Header from "./Header";
+import Header from "./Header/Header";
 import NewSection from "../LandingPage/NewSection/NewSection";
-import TrendingSection from "./TrendingSection";
 // //import '../scss/main.scss';
 
 const LandingPage = () => {
@@ -12,7 +11,7 @@ const LandingPage = () => {
             <Header/>
             <main>
                 <NewSection/>
-                <TrendingSection/>
+                {/* <TrendingSection/> */}
                 <BlogSection/>
             </main>
             <Footer/>
