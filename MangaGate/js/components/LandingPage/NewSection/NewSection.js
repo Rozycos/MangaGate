@@ -99,21 +99,6 @@ const NewSection =()=>{
         };
         fetchPreviousData();
     };
-
-    // const findLastPage = () =>{
-    //     const fetchFindLastPage = async () =>{
-    //         const collection_ref = collection(getDb(), collection_name);
-    //         const q2 = query(collection_ref, where("isPublish", "==", true));
-    //         const snapshot = await getCountFromServer(q2);
-    //         const lastPag = 0;
-    //         lastPag = Math.ceil((snapshot.data().count)/limitNumber)
-            
-    //         setLastPage((snapshot.data().count)/limitNumber);
-            
-    //     }
-    //     fetchFindLastPage();
-        
-    // };
     
     return(
         <section className="container section__new">

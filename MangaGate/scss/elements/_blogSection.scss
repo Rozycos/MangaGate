@@ -7,8 +7,7 @@
         margin: 0 auto;
        
         @include notebook {
-            width: 100%;
-            ///padding: 0 1rem !important;
+            width: 99%;
         }
         
     }
@@ -17,10 +16,10 @@
         font-style: normal;
         font-weight: 600;
         font-size: 1.0667rem;
-        line-height: 1.2444rem;
+        line-height: 117%;
         /* identical to box height, or 117% */
         letter-spacing: 0.5px;
-        padding: 85px 0 21px 0;
+        padding: calc(85px - 2rem) 0 21px 0;
         @include mobile {
             padding: 10% 0 21px 0;
         }
@@ -46,4 +45,47 @@
             width:98%;
         }
     }
+}
+
+.tabs__nav{
+    list-style:none;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    //height: 100%;
+    height: 2rem;
+    //border-bottom: 0.4rem;
+    padding: 0;
+    width: 98%;
+    border-bottom: 3px solid $color-light-grey;
+        @include mobile {
+            flex-wrap: wrap;
+            border-bottom:none;
+            margin: 0;
+        }
+
+    
+    li{
+        //text-decoration: none;
+        margin: 0 1rem 0 0;
+        font-weight: 600;
+        font-size: 0.9rem;
+        line-height: 140%;
+        letter-spacing: 0.5px;
+        cursor:pointer;
+        padding: 0 0 .8rem 0;
+        @include mobile {
+            //padding: 0 0 .5rem 0;
+        }
+
+    }
+}
+
+.active{
+    border-bottom: 3px solid $color-black;
+    border-radius: 1px;
+    //z-index: 20;
+    position:relative;
+    
+    
 }

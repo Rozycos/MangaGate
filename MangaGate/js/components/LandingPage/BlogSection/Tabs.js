@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import NewSection from "../NewSection/NewSection";
 import FirstTab from "./AllTabs/FirstTab";
 import SecondTab from "./AllTabs/SecondTab";
 import TabContent from "./V2/TabContent";
@@ -9,8 +10,8 @@ const Tabs = () => {
     const [activeTab, setActiveTab] = useState("comedy");
    
     return (
-      <div className="Tabs">
-        <ul className="nav">
+      <div className="tabs">
+        <ul className="tabs__nav">
           <TabNavItem title="comedy" id="comedy" activeTab={activeTab} setActiveTab={setActiveTab}/>
           <TabNavItem title="fantasy" id="fantasy" activeTab={activeTab} setActiveTab={setActiveTab}/>
           <TabNavItem title="drama" id="drama" activeTab={activeTab} setActiveTab={setActiveTab}/>
@@ -21,7 +22,7 @@ const Tabs = () => {
    
         <div className="outlet">
             <TabContent id="comedy" activeTab={activeTab}>
-                <FirstTab/>
+                <NewSection/>
             </TabContent>
             <TabContent id="fantasy" activeTab={activeTab}>
                 <SecondTab/>
