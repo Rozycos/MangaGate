@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NewSection from "../NewSection/NewSection";
+import BlogSectionTabs from "./AllTabs/BlogTabs/BlogSectionTabs";
 import FirstTab from "./AllTabs/FirstTab";
 import SecondTab from "./AllTabs/SecondTab";
 import TabContent from "./V2/TabContent";
@@ -16,28 +17,24 @@ const Tabs = () => {
           <TabNavItem title="fantasy" id="fantasy" activeTab={activeTab} setActiveTab={setActiveTab}/>
           <TabNavItem title="drama" id="drama" activeTab={activeTab} setActiveTab={setActiveTab}/>
           <TabNavItem title="action" id="action" activeTab={activeTab} setActiveTab={setActiveTab}/>
-          <TabNavItem title="history" id="history" activeTab={activeTab} setActiveTab={setActiveTab}/>
           <TabNavItem title="military" id="military" activeTab={activeTab} setActiveTab={setActiveTab}/>
         </ul>
    
         <div className="outlet">
             <TabContent id="comedy" activeTab={activeTab}>
-                <NewSection/>
+                <BlogSectionTabs category={"comedy"}/>
             </TabContent>
             <TabContent id="fantasy" activeTab={activeTab}>
-                <SecondTab/>
+                <BlogSectionTabs category={"fantasy"}/>
             </TabContent>
             <TabContent id="drama" activeTab={activeTab}>
-                <p>Tab 3 works!</p>
+                <BlogSectionTabs category={"drama"}/>
             </TabContent>
             <TabContent id="action" activeTab={activeTab}>
-                <p>tab 4 works!</p>
-            </TabContent>
-            <TabContent id="history" activeTab={activeTab}>
-                <p>tab 5 works!</p>
+                <BlogSectionTabs category={"action"}/>
             </TabContent>
             <TabContent id="military" activeTab={activeTab}>
-                <p>tab 6 works! Będzie Military</p>
+                <BlogSectionTabs category={"military"}/>
             </TabContent>
         </div>
       </div>
