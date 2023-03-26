@@ -1,5 +1,8 @@
 import React from "react";
 
+const d = new Date();
+let year = d.getFullYear();
+
 const Footer =()=>{
     return(
         <footer className="container footer">
@@ -19,7 +22,7 @@ const Footer =()=>{
                 </div>
             </section>
             <section className="footer__container">
-                <div className="copyright">@copyright 2021 Gates</div>
+                <div className="copyright">@copyright {year} MangaGates</div>
             </section>
         </footer>
     )
