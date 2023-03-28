@@ -8,16 +8,16 @@ const BlogSectionTabList = (props) =>{
 // console.log(articlesCategory)
 
     return(
-        <span className="box__article--list" >
-                    <img src={articles.imageURL}/>
-                    <div >
-                        {/* <span>{category}</span> */}
-                        <h3>{articles.title}</h3>
-                        <p>{articles.postText}</p>
-                        {/* <a className="new__box--text-link">Read Full &#187;</a> */}
-                        <NavLink className="new__box--text-link" to={`/page/${articles.id}/${articles.postURL}`}>Read Full &#187;</NavLink>
-                    </div>
-                </span>
+        <li className="blog__category--list" >
+            <img src={articles.imageURL}/>
+            <div className="blog__category--text">
+                {/* <span>{category}</span> */}
+                <h3>{articles.title}</h3>
+                <p>{articles.postText}</p>
+                {/* <a className="new__box--text-link">Read Full &#187;</a> */}
+                <NavLink className="blog__category--link" to={`/page/${articles.id}/${articles.postURL}`}>Read Full &#187;</NavLink>
+            </div>
+        </li>
     )
 
 }

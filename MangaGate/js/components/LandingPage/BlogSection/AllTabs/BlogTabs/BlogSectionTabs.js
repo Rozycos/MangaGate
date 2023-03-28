@@ -102,22 +102,27 @@ const BlogSectionTabs =(props)=>{
     };
     
     return(
-        <section >
+        <section className="blog__section">
             {/* <div className="section__new--container section__new--header">{category}</div> */}
-            <div >
-            { pending && 
-                    <p>loading...</p>
-                }
-                {list.length > 0 && list.map(articles => (
-                        <BlogSectionList key={articles.id} articles={articles} category={category} />
-                    ))}
-                <span className="paginator">
+            <span className="blog__container">
+                <div className="blog__category--wrap">
+                    <ul className="blog__category">
+                    { pending && 
+                            <p>loading...</p>
+                        }
+                        {list.length > 0 && list.map(articles => (
+                                <BlogSectionList key={articles.id} articles={articles} category={category} />
+                            ))}
+                    </ul>
+                </div>
+                {/* <div className="blog__category--reads">
+                    
+                </div> */}
+            </span>
+                <span className="paginator blog__paginator">
                     <button className="btn__paginator" disabled={page === 1 } onClick={() => showPrevious({ item: list[0] }) }>&#171;</button>
                     <button className="btn__paginator" disabled={list.length < limitNumber || nextButtonDisabled || page === showLastPage } onClick={() => showNext({ item: list[list.length - 1] })}>&#187;</button>
                 </span>
-            </div>
-            
-            
         </section>
     )
 }

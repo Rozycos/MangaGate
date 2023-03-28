@@ -20,7 +20,7 @@ const Tabs = () => {
           <TabNavItem title="military" id="military" activeTab={activeTab} setActiveTab={setActiveTab}/>
         </ul>
    
-        <div className="outlet">
+        <div className="outlet blog__category--outlet">
             <TabContent id="comedy" activeTab={activeTab}>
                 <BlogSectionTabs category={"comedy"}/>
             </TabContent>
