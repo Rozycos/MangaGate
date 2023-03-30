@@ -4,6 +4,8 @@ import {HashRouter, Route, Routes} from "react-router-dom";
 import '../scss/main.scss';
 import AddNewPage from "./components/AppMain/AddNewPage";
 import AdminPanel from "./components/AppMain/AdminPanel";
+import UpdateData from "./components/AppMain/UpdateData/UpdateData";
+import UpdateForm from "./components/AppMain/UpdateData/UpdateForm";
 import UserProvider from "./components/context/UserProvider";
 import ArticleDelete from "./components/Database/Popup";
 import LandingPage from "./components/LandingPage/index";
@@ -19,6 +21,9 @@ const App = () => (
                 <Route path={"admin/addnew"} element={<AddNewPage />}></Route>
                 <Route path={"admin/delete"} element={<ArticleDelete />}>
                     <Route path={":articleId"} element={<ArticleDelete />} />
+                </Route>
+                <Route path={"admin/edit"} element={<UpdateData />}>
+                    <Route path={":articleId"} element={<UpdateData/>} />
                 </Route>
                 <Route path="*" element={<NotFound />} />
                 <Route path={"page"} element={<Page/>}>

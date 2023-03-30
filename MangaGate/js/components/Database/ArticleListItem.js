@@ -31,7 +31,9 @@ const ArticleListItem=(props)=> {
             <div>   
                 <h3>{articles.title}</h3>
                 <p>{articles.postText}</p>
-                <button className="btn btn__primary btn__form">Edit</button>
+                <button className="btn btn__primary btn__form">
+                    <Link className="admin__link" to={`/admin/edit/${articles.id}`}>Edit</Link>
+                </button>
                 <button className="btn btn__primary btn__form btn__logout" onClick={() => setOpen(true)}>
                     Delete
                     {/* <Link className="admin__link" to={`/admin/delete/${articles.id}`}>Delete</Link> */}

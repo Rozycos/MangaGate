@@ -11,9 +11,9 @@ const Sidebar = () => {
             <button className="btn btn__primary btn__form">
                 <Link className="admin__link" to="/admin/addnew">Add new</Link>
             </button>
-            <button className="btn btn__primary btn__form">
+            {/* <button className="btn btn__primary btn__form">
                 <Link className="admin__link" to="/admin/edit">Edit</Link>
-            </button>
+            </button> */}
         </>
     )
 }
