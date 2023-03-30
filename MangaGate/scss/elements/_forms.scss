@@ -43,6 +43,9 @@
       @include mobile {
           width: 310px;
       }
+      &-update{
+        margin: 1rem 0 0 0;
+      }
     }
     &--checkbox{
       display: flex;
@@ -59,6 +62,9 @@
       @include tablet {
         width: 16.0rem;
     }
+    }
+    &-update{
+      margin: 0 0 0 0;
     }
   }
   
@@ -118,5 +124,8 @@
     cursor: pointer;
     &--log{
       margin: 2rem 1rem;
+    }
+    &--update{
+      margin: 0 0 1rem 0;
     }
   }
