@@ -59,15 +59,6 @@
         color: $color-white;
         font-size: .7112rem;
         letter-spacing: 0.5px;
-        // position: relative;
-        // right: 100%;
-        // top: 100px;
-        //justify-self: end;
-        //align-self: flex-end;
-        //align-self: flex-end;
-        //         position: relative;
-        // left: 1%;
-        // top: 100px;
         transform: translate(-100%, 300%);
 
         @include mobile {
@@ -79,20 +70,11 @@
     }
 
     &__img{
-        //background-image: url(../assets/Intersect.png);
         height: 100%;
-        //max-width: 550px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
 
     }
-
-    // &__nav{
-    //     // display: flex;
-    //     // justify-content: flex-end;
-    //     //align-self: flex-end;
-    // }
-    
 }

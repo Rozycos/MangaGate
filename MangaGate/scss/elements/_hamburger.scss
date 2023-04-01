@@ -41,12 +41,6 @@
   }
 }
 
-// .hamburger__icon {
-//   //border: 2px solid black;
-//   border-radius: 50%;
-  
-// }
-
 .line{
   border: 1px solid $color-black;
   margin: 4px;
@@ -56,35 +50,5 @@
   display:none;
   @include mobile {
     display: block;
+  }
 }
-}
-
-// .hamburger__nav {
-//   font-size: 0.62222rem;
-//   font-weight: 500;
-//   position: absolute;
-//   top: 2.1rem;
-//   right:0;
-//   z-index: 1;
-// }
-// .nav__element--hamburger {
-//   padding: 0 2em;
-//   list-style: none;
-//   background-color: white;
-//   width: 20em;
-//   height: 3.1115em;
-//   z-index: 1;
-//  // cursor: pointer;
-// //  position: absolute;
-// //  top: 70px;
-// //  right:200px;
-// }
-
-// .nav__link--hamburger{
-//   text-decoration: none;
-//   color: $color-black;
-//     &:hover {
-//       color: $color-black;
-//       border-bottom: 2px solid $color-black;
-//     }
-// }
