@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import {HashRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route, Routes} from "react-router-dom";
 import '../scss/main.scss';
 import AddNewPage from "./components/AppMain/AddNewPage";
 import AdminPanel from "./components/AppMain/AdminPanel";
@@ -14,7 +14,8 @@ import Page from "./components/SinglePage/Page";
 
 const App = () => (
     <UserProvider>
-        <HashRouter>
+        {/* <HashRouter> */}
+        <BrowserRouter>
             <Routes>
                 <Route path={"/"} element={<LandingPage />}></Route>
                 <Route path={"admin"} element={<AdminPanel />}></Route>
@@ -31,7 +32,8 @@ const App = () => (
                     {/* <Route path={":articleUrl/:articleId"} element={<Page/>} /> */}
                 </Route>
             </Routes>
-        </HashRouter>
+        {/* </HashRouter> */}
+        </BrowserRouter>
     </UserProvider>
 )
 
