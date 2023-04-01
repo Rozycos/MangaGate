@@ -1,11 +1,8 @@
 import React from "react";
-//import Articlelist from "../Database/ArticleList";
 import Footer from "../LandingPage/Footer";
-//import Header from "../LandingPage/Header";
 import Navigation from "../../components/LandingPage/Header/Navigation";
 import { findAll, findOne } from "../../../firebase_setup/GetArticles";
 import {useParams} from "react-router-dom";
-//import SingleArticle from "./SingleArticle";
 import { useState, useEffect } from 'react';
 
 const Page =()=>{
@@ -58,11 +55,6 @@ const Page =()=>{
                             
                         
                     </section>
-                    {/* <section>
-                        <div>
-                            coś tam
-                        </div>
-                    </section> */}
                 </article>
             </main>
             <Footer/>

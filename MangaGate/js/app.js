@@ -5,7 +5,7 @@ import '../scss/main.scss';
 import AddNewPage from "./components/AppMain/AddNewPage";
 import AdminPanel from "./components/AppMain/AdminPanel";
 import UpdateData from "./components/AppMain/UpdateData/UpdateData";
-import UpdateForm from "./components/AppMain/UpdateData/UpdateForm";
+//import UpdateForm from "./components/AppMain/UpdateData/UpdateForm";
 import UserProvider from "./components/context/UserProvider";
 import ArticleDelete from "./components/Database/Popup";
 import LandingPage from "./components/LandingPage/index";

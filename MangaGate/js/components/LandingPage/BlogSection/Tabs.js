@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import NewSection from "../NewSection/NewSection";
 import BlogSectionTabs from "./AllTabs/BlogTabs/BlogSectionTabs";
-import FirstTab from "./AllTabs/FirstTab";
-import SecondTab from "./AllTabs/SecondTab";
 import TabContent from "./V2/TabContent";
 import TabNavItem from "./V2/TabNavItem";
 

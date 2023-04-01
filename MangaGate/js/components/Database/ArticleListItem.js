@@ -1,27 +1,11 @@
 import React, { useState } from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
-import {getFirestore, doc, deleteDoc} from "firebase/firestore";
 import Popup from "./Popup";
 
 const ArticleListItem=(props)=> {
     const { articles, width } = props
     
     const [open, setOpen] = useState(false);
-
-    // const db = getFirestore();
-
-    // const docRef = doc(db, "articles", articles.id);
-    
-    // deleteDoc(docRef)
-    // .then(() => {
-    //     console.log("Entire Document has been deleted successfully.")
-    // })
-    // .catch(error => {
-    //     console.log(error);
-    // })
-
-
-
     
     return (
         <li className="box__article--list" >

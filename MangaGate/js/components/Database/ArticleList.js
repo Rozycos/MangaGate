@@ -8,10 +8,6 @@ import { getDb } from "../../../firebase_setup/db";
 
 const collection_name = "articles";
 const limitNumber = 5;
-//let block = false
-// const coll = collection(getDb(), collection_name);
-// const snapshot = await getCountFromServer(coll);
-// console.log('count: ', snapshot.data().count);
 
 const ArticleList=() =>{
     const [list, setList] = useState([]);
