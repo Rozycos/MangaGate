@@ -14,8 +14,8 @@ import Page from "./components/SinglePage/Page";
 
 const App = () => (
     <UserProvider>
-        {/* <HashRouter> */}
-        <BrowserRouter>
+        <HashRouter>
+        {/* <BrowserRouter> */}
             <Routes>
                 <Route path={"/"} element={<LandingPage />}></Route>
                 <Route path={"admin"} element={<AdminPanel />}></Route>
@@ -32,8 +32,8 @@ const App = () => (
                     {/* <Route path={":articleUrl/:articleId"} element={<Page/>} /> */}
                 </Route>
             </Routes>
-        {/* </HashRouter> */}
-        </BrowserRouter>
+        </HashRouter>
+        {/* </BrowserRouter> */}
     </UserProvider>
 )
 
