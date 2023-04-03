@@ -25,4 +25,5 @@ node_modules/
 ### Other ###
 .test/
 .solution
-#build/
+build/
+#*hot-update.js

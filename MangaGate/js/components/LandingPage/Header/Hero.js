@@ -22,7 +22,7 @@ const Hero = () => {
                             <button className="form__input--button">&#62;</button>
                         </div>
                     </div>
-                    <img className=" hero__img" src="./assets/Intersect.png"/>
+                    <img className=" hero__img" src="/assets/Intersect.png"/>
                     <ul className="hero__list">
                         <li>Action</li>
                         <li>Comedy</li>
