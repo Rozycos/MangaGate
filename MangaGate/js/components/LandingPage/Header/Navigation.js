@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AppContext } from "../../context/UserProvider";
 import Hamburger from './Hamburger';
 
@@ -13,7 +13,7 @@ const Navigation = () =>{
                 <li className="nav__element"></li>
                 ) : (
                 <li className="nav__element">{"User: " + currentUser.email}</li>)}
-                <li className="nav__element"><Link className="nav__link" to="/">Home</Link></li>     
+                <li className="nav__element"><NavLink className="nav__link" to="/">Home</NavLink></li>
                 <li className="nav__element"><Hamburger /></li>                
             </ul>
         </nav>
