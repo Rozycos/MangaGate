@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const entryPath = "MangaGate";
 
@@ -63,6 +64,10 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       process: "process/browser",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: "./MangaGate/index.html",
     }),
   ],
 };
